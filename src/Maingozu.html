@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/generic.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.60/jspdf.min.js"></script>
+    <title>ControlTaller</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class="bx bxl-c-plus-plus"></i>
+                <div class="logo_name">ControlTaller</div>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav_list">
+            <li id="nuevaMatricula">
+                <a href="#">
+                    <i class='bx bxs-car'></i>
+                    <span class="links_name">Nueva matricula</span>
+                </a>
+            </li>
+            <li id="historial">
+                <a href="#">
+                    <i class="bx bxs-registered"></i>
+                    <span class="links_name">Buscar Matricula</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="links_name">Proximamente</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="home_content">
+        <div id="box-search">
+            <div class="row">
+                <div class="col-6">
+                    <h1 class="logo">Buscar <span>Matricula</span></h1>
+                </div>
+                <div style="align-items: center;align-content: center;text-align: center;">
+                    <form>
+                        <input style="margin: 20px;size: 100px;padding: .7em;
+                        border: none;background: white;outline: 100;color: rgb(0, 0, 0);border-bottom: 3px solid #d63031" type="search"  placeholder="Buscar" size="70" aria-label="Search" id="formulario">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <a href="javascript:pdfexport();">ExportPDF</a>
+        </div>
+    </div>
+    <script>
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+
+        btn.onclick= function(){
+            sidebar.classList.toggle("active");
+        }
+    </script>
+
+    <a href="javascript:pdfexport();">ExportPDF</a>
+    <script type="text/javascript" src="pdfs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+
+</html>
